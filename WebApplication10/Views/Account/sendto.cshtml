@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WebApplication10.Models.Account
+
+<form method="post" asp-action="update">
+    <div class="border p-3">
+
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Add Catagory</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    @ViewBag.c
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="Id"></label></div>
+                        <div class="col-8"><input asp-for="Id" class="form-control" /></div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="account_id"></label></div>
+                        <div class="col-8"><input asp-for="account_id" class="form-control" /></div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        @{ var acc = TempData["acc"];}
+                        @{int amount = Convert.ToInt32(acc);}
+                        @{ int bal = Convert.ToInt32(Model.balance); }
+                        @{ string check = TempData["va"].ToString();
+                            string trans = TempData["trans"].ToString();
+                            string user = TempData["user"].ToString();
+
+                            int d = 0;
+
+
+
+
+                            d = amount + bal;
+
+
+
+
+
+
+
+                        }
+
+
+
+                        <div class="col-8"> <input asp-for="balance" value="@d" class="form-control" /> </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-8 offset-4 row">
+                            <div class="col"><input type="submit" class="btn btn-info w-100" value="transfer" /></div>
+                            <div class="col"><a  class="btn btn-success w-100">Back</a></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-4"> </div>
+            </div>
+        </div>
+</form>
+
+
+

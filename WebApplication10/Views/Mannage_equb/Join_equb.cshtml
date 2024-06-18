@@ -1,0 +1,22 @@
+﻿@model WebApplication10.Models.Equb_order
+@{
+    ViewData["Title"] = "Join_equb";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Join_equb</h1>
+<form method="post" asp-action="Join_equb" >
+    
+    <div class="mb-3 mt-3">
+        <label class="form-label">Equb id:</label> 
+        <input type="text" class="form-control" id="e_name" placeholder="Enter equb id" asp-for="equb_id">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

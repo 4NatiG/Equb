@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WebApplication10.Models.Account
+
+<form method="post" asp-action="update">
+    <div class="border p-3">
+        
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Add Catagory</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    @{string s = TempData["u"].ToString();}
+                    <div class="form-group row">
+                        
+                        <div class="col-8"><input asp-for="Id" value="@s" hidden class="form-control" /></div>
+
+                    </div>
+                    <div class="form-group row">
+                      
+                        <div class="col-8"><input asp-for="account_id" hidden class="form-control" /></div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        @{ var acc = TempData["acc"];}
+                        @{int amount = Convert.ToInt32(acc);}
+                        @{ int bal = Convert.ToInt32(Model.balance); }
+                        @{ string check = TempData["va"].ToString();
+
+                            int d = 0;
+                            int n = Convert.ToInt32(TempData["accid"]);
+                            if (check == "deposit")
+                            {
+
+                                d = amount + bal;
+
+                            }
+                            else
+                            {
+                                if (amount > bal)
+                                {
+                                    ViewBag.message = "can not complete this transaction because ur chigaram";
+
+                                }
+                                else
+                                {
+                                    d = bal - amount;
+                                }
+
+                            }
+
+
+                        }
+
+
+                        <h4>Your account balance is @d. PLEASE PRESS OK TO CONTINUE </h4>
+                        <div class="col-8"> <input asp-for="balance" value="@d" hidden class="form-control" /> </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-8 offset-4 row">
+                            <div class="col"><input type="submit" class="btn btn-info w-100" value="OK" /></div>
+                           
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-4"> </div>
+            </div>
+        </div>
+</form>
+
+
+

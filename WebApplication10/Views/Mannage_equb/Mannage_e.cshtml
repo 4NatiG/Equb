@@ -1,0 +1,35 @@
+﻿@model List<WebApplication10.Models.equb_detail>
+@{
+    ViewData["Title"] = "Mannage_e";
+}
+
+<h1>Curent Equbes </h1> 
+<div class="container mt-3">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Equb Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.equb_name </td>
+                    <td>@item.status</td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-controller="Mannage_equb" asp-route-Id="@item.equb_id" asp-action="ViewDetail" class="btn btn-outline-primary">View Detail</a>
+                            <a asp-controller="Mannage_equb" asp-route-Id="@item.equb_id" asp-action="View_order" class="btn btn-outline-primary">View Order</a>
+                            <a asp-controller="Mannage_equb" asp-route-Id="@item.equb_id" asp-action="swap" class="btn btn-outline-primary">Swap</a>
+                        </div>
+                    </td>
+                </tr>
+}
+        </tbody>
+    </table>
+    <a asp-controller="Mannage_equb" asp-action="Join_equb" class="btn btn-outline-success"> Join </a>
+</div>
+

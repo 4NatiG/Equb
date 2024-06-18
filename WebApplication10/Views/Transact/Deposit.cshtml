@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model WebApplication10.Models.Transact
+
+<form method="post" asp-action="Deposit" style="background-color:antiquewhite;">
+    <div class="border p-3">
+
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Transaction Form</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="trans_type"></label></div>
+                        @*<div class="col-8"><input asp-for="trans_type" class="form-control" /></div>*@
+                        <select id="sele" asp-for="trans_type">
+                            <option selected> deposit</option>
+                            <option selected> withdraw</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="trans_to"></label></div>
+                        <div class="col-8"><input asp-for="trans_to" class="form-control" /></div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="ac_id"></label></div>
+                        <div class="col-8"><input asp-for="ac_id" class="form-control" /></div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="time"></label></div>
+                        <div class="col-8"><input asp-for="time" class="form-control" /></div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="id"></label></div>
+                        <div class="col-8"><input asp-for="id" value=@TempData["userid"] class="form-control" /></div>
+
+                    </div>
+                    @using (Html.BeginForm("Deposit", "Transact", FormMethod.Post))
+                    {
+                        <div class="form-group row">
+                            <div class="col-4"><label asp-for="amount"></label></div>
+                            <div class="col-8">  @Html.TextBox("amount") </div>
+
+
+                        </div>}
+
+                    <div class="form-group row">
+                        <div class="col-4"><label asp-for="account_id"></label></div>
+                        <div class="col-8"> <input asp-for="account_id" class="form-control" /> </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-8 offset-4 row">
+
+                            <div class="col"><input type="submit" class="btn btn-info w-100" value="Create" /></div>
+
+                            <div class="col"><a asp-action="Index" class="btn btn-success w-100">Back</a></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="col-4"> </div>
+                </div>
+            </div>
+    </form>

@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<WebApplication10.Models.equb_detail>
+@{
+    ViewData["Title"] = "Created Equbs";
+    var x = Convert.ToString(TempData["acc"]);
+}
+<script type="text/javascript">
+    
+</script>
+
+
+<h1>Created</h1>
+
+<div class="container mt-3">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Equb Name </th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @using (Html.BeginForm("participants", "Mannage_equb", FormMethod.Post))
+            {
+            @foreach (var item in Model)
+            {
+
+                if (@item.user_id == x)
+                {
+                    <tr>
+                        <td asp-for="equb_id" >@item.equb_id </td>
+                        <td>@item.status</td>
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="Mannage_equb" asp-action="Participants" class="btn btn-outline-primary">Detail</a>
+                                <a asp-controller="Mannage_equb" asp-action="Participants" class="btn btn-outline-primary">Participants</a>
+                                <a asp-controller="Mannage_equb" asp-action="Participants" class="btn btn-outline-primary">Swap</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                }
+
+            }
+            }
+        </tbody>
+    </table>
+</div>

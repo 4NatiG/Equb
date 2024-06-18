@@ -1,0 +1,90 @@
+﻿@model WebApplication10.Models.equb_detail 
+
+
+@{
+    
+}
+
+<script type="text/javascript">
+
+</script>
+
+
+<form method="post" asp-action="Create" style="background-color:wheat;">
+    <div class="border p-3">
+
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Add Catagory</h2>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="equb_name">Equb Name</label>
+                    <input type="text" class="form-control" id="EqubName" asp-for="equb_name" placeholder="Equb Name">
+                    <span asp-validation-for="equb_name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="cycle">Cycle</label>
+                    <select class="form-control" asp-for="cycle" id="cycle">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="equb_type">Equb Type</label>
+                    <select class="form-control" asp-for="equb_type" id="type">
+                        <option value="company">Company</option>
+                        <option value="community">Community</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="duration">Duration</label>
+                    <input type="number" class="form-control" asp-for="duration" id="duration" placeholder="Duration">
+                    <span asp-validation-for="duration" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="password">Password</label>
+                    <input type="password" class="form-control" asp-for="password" id="password" placeholder="password">
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="amount">Amount</label>
+                    <input type="number" class="form-control" asp-for="amount" id="amount" placeholder="Amount">
+                    <span asp-validation-for="amount" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+
+                    <label asp-for="user_id">Amo</label>
+                    @{string s = TempData["acc"].ToString();}
+                    <div class="col-8"><input asp-for="user_id" value="@s" class="form-control" /></div>
+                    <span asp-validation-for="user_id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="password">Confirm Password</label>
+                    <input type="password" class="form-control" asp-for="password" id="password2" placeholder="confirm password">
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="start_date">Start Date</label>
+                    <input type="date" class="form-control" asp-for="start_date" id="date" placeholder="start date">
+                    <span asp-validation-for="start_date" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-8 offset-4 row">
+                    <div class="col"><input type="submit" class="btn btn-info w-100" value="Create" /></div>
+                    <div class="col"><a asp-controller="Home" asp-action="Index" class="btn btn-success w-100">Back</a></div>
+                </div>
+</form>
+
+
+

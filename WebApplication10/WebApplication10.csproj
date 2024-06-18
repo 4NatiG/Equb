@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220925143445_addto.cs" />
+    <Compile Remove="Migrations\20220925143445_addto.Designer.cs" />
+    <Compile Remove="Migrations\20220925153945_addtodatabase.cs" />
+    <Compile Remove="Migrations\20220925153945_addtodatabase.Designer.cs" />
+    <Compile Remove="Migrations\20220927202010_addtodb.cs" />
+    <Compile Remove="Migrations\20220927202010_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\20220927210124_addtodb.cs" />
+    <Compile Remove="Migrations\20220927210124_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\20220929082648_adtodb.cs" />
+    <Compile Remove="Migrations\20220929082648_adtodb.Designer.cs" />
+    <Compile Remove="Migrations\20220929082940_addtodb.cs" />
+    <Compile Remove="Migrations\20220929082940_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\20220929084922_addbd.cs" />
+    <Compile Remove="Migrations\20220929084922_addbd.Designer.cs" />
+    <Compile Remove="Migrations\20220930174704_addtodb.cs" />
+    <Compile Remove="Migrations\20220930174704_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\20220930182328_addtodb.cs" />
+    <Compile Remove="Migrations\20220930182328_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\20221001054334_adddb.cs" />
+    <Compile Remove="Migrations\20221001054334_adddb.Designer.cs" />
+    <Compile Remove="Migrations\20221001062812_addbd.cs" />
+    <Compile Remove="Migrations\20221001062812_addbd.Designer.cs" />
+    <Compile Remove="Migrations\20221001171347_add.cs" />
+    <Compile Remove="Migrations\20221001171347_add.Designer.cs" />
+    <Compile Remove="Migrations\20221001180626_add.cs" />
+    <Compile Remove="Migrations\20221001180626_add.Designer.cs" />
+    <Compile Remove="Migrations\20221002085317_adddb.cs" />
+    <Compile Remove="Migrations\20221002085317_adddb.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927193216_addtobd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927193216_addtobd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927194835_addtobd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927194835_addtobd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927195230_addtobd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927195230_addtobd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927202844_addtobd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220927202844_addtobd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220928091426_addtob.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220928091426_addtob.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220929093403_addbd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220929093403_addbd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220929100651_addb.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20220929100651_addb.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20221001054457_addbd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20221001054457_addbd.Designer.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20221002085531_addbd.cs" />
+    <Compile Remove="Migrations\AppDbcontextMigrations\20221002085531_addbd.Designer.cs" />
+    <Compile Remove="Migrations\AuthDb\20220929083351_addbd.cs" />
+    <Compile Remove="Migrations\AuthDb\20220929083351_addbd.Designer.cs" />
+    <Compile Remove="Migrations\AuthDb\20220929085208_adddb.cs" />
+    <Compile Remove="Migrations\AuthDb\20220929085208_adddb.Designer.cs" />
+    <Compile Remove="Migrations\AuthDb\20220930174812_addtodb.cs" />
+    <Compile Remove="Migrations\AuthDb\20220930174812_addtodb.Designer.cs" />
+    <Compile Remove="Migrations\AuthDb\20221001062920_adddb.cs" />
+    <Compile Remove="Migrations\AuthDb\20221001062920_adddb.Designer.cs" />
+    <Compile Remove="Migrations\AuthDb\20221001180736_adddb.cs" />
+    <Compile Remove="Migrations\AuthDb\20221001180736_adddb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.25">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\AppDbcontextMigrations\" />
+  </ItemGroup>
+
+</Project>
